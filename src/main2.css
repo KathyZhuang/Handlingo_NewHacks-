@@ -5,7 +5,7 @@
   height:240px;
   position: absolute;
   top: 315px;
-  left: 300px;
+  left: 450px;
 }
 
 #photo {
@@ -15,7 +15,7 @@
   height:240px;
   position: absolute;
   top: 315px;
-  left: 630px;
+  left: 780px;
 }
 
 #canvas {
@@ -41,11 +41,11 @@
   background-color: rgba(0, 150, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Lucida Grande", "Arial", sans-serif;
   color: rgba(255, 255, 255, 1.0);
-  top: 515px;
-  left: 430px;
+  top: 85%;
+  left: 35%;
 }
 
 .contentarea {
@@ -72,8 +72,7 @@ div {
 
 h2 {
   position: absolute;
-  left: 615px;
-  top: 160px;
-  font-size: 60px;
+  left: 48%;
+  top: 147px;
+  font-size: 60px
 }
-
