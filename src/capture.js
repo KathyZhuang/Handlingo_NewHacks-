@@ -18,6 +18,8 @@
   var canvas = null;
   var photo = null;
   var startbutton = null;
+  
+  
 
   function startup() {
     video = document.getElementById('video');
@@ -92,6 +94,11 @@
       clearphoto();
     }
   }
+  
+  function download(){
+    document.getElementById("downloader").download = "image.png";
+    document.getElementById("downloader").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+	}
 
   // Set up our event listener to run the startup process
   // once loading is complete.

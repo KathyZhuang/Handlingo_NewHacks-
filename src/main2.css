@@ -61,7 +61,7 @@ div {
 }
 
 .tiledBackground {
-  background-image: url(level1.png);
+  background-image: url(level2.png);
   background-position: center;
   background-size: 1040px;
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@ div {
 
 h2 {
   position: absolute;
-  left: 600px;
-  top: 150px;
+  left: 615px;
+  top: 145px;
   font-size: 60px
 }
