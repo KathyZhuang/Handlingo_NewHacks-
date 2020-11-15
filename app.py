@@ -4,22 +4,49 @@ import json
 import cv2
 import base64
 import numpy
+import random
 
-#http://localhost:5000/video_sample/
+#http://localhost:5000/homepage/
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
+English = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+Italian = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
 
 @app.route('/')
 def hello_world():
     return Response('hello_world')
 
+@app.route('/homepage/')
+def homepage():
+    return render_template('homepage.html')
 
-@app.route('/video_sample/')
-def video_sample():
-    return render_template('camera.html')
+@app.route('/learn_ASL/')
+def learnASL():
+    return render_template('learnASL.html')
 
+@app.route('/learn_ISL/')
+def learnISL():
+    return render_template('learnISL.html')
+
+@app.route('/level1/')
+def level1():
+    E = random.choice(English)
+    return render_template('camera.html',jay=E)
+
+@app.route('/level2/')
+def level2():
+    I = random.choice(Italian)
+    return render_template('level2.html',jay=I)
+
+@app.route('/answer_correct/')
+def answer_correct():
+    return render_template('answer_correct.html')
+
+@app.route('/answer_wrong/')
+def answer_wrong():
+    return render_template('answer_wrong.html')
 
 @app.route('/receiveImage/', methods=["POST"])
 def receive_image():
